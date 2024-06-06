@@ -6,6 +6,7 @@ import { addItemToCart } from "../../redux/cartSlice";
 const Dish = ({dish}) => {
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
+    console.log(`./${dish.img}.jpg`)
     return (
         <div>
             <img src={`./${dish.img}.jpg`} alt="food" />
