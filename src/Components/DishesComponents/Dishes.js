@@ -1,6 +1,6 @@
 import dataDishes from "../../data/dataDishes";
-import Dish from "./Dish";
 import { useSelector } from 'react-redux';
+import Dish from './Dish';
 import { getSelectedCategory } from '../../redux/dishesSlice';
 
 
@@ -9,10 +9,11 @@ const Dishes = () => {
     return (
         <div>
             {dataDishes.filter(dish => {
-                if(selectedCategory === "ALL") return true;
+                if (selectedCategory === "ALL") return true;
                 return selectedCategory === dish.category;
             })
-            .map((dish, index) => <Dish key={index} dish={dish}/>)}
+                .map((dish, index) => <Dish key={index} dish={dish} />)}
+
         </div>
     )
 }
